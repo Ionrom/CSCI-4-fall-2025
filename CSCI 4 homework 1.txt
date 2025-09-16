@@ -34,7 +34,8 @@ Logic: Function performs subtraction based on inputs.
 5. Question 5
 please write the python code for the subtraction function you designed above:
 def subtract(a, b):
-  return (a - b)
+subtract_result = a - b
+  return subtract_result
 
 
 6. Extra credit
@@ -43,4 +44,5 @@ try and find something that is interesting to you, not necessarily to this class
 Here write the subject and paste the link to it. Also put three questions you
 have about that subject/niche something specific to that subject that might not
 be right to ask about all of CS. If you questions are interesting to me, I might take
+
 the opportunity to answer some of them in lab (to the best of my ability).
