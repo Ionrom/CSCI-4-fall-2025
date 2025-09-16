@@ -1,0 +1,46 @@
+﻿Ian Stuart
+CSCI 4, Homework 1
+10-14-25
+
+
+1. Question 1 
+Please explain what pseudocode is and why we use it:
+Pseudocode is the layout and building blocks of computer programming; it's a mixer of both math and English. It is a language that contains binding of names, values, expressions, algebra, and functions with many symbols. Pseudocode also has its own interpretations and logic in its own operation in code. We use pseudocode to design software, create algorithms, and to explain certain subjects.
+
+
+2. Question 2
+ Please explain to me what the basic data types are and why we need them in your own words:
+Data types are the integers & numbers within code. Data types are primarily used for storing memory and information which contain different values of numbers and symbols.
+
+
+3. Question 3 Write the THEORY based, data types of the following
+variables:
+• a = 5  This is a number.
+• b = ‘h’ This is a character.
+• c = [1,2,3,4,5] This is a set.
+• d = true This would be a boolean.
+• e = false This would be a boolean.
+
+
+4. Question 4
+Write some pseudocode for the subtraction function. Remember to start with the type notation of the function:
+This pseudocode is a subtract of numbers that returns a number when it takes a parameter of subtracted inputs and it returns a number as a result:
+Name: Subtract.
+Type: Number.
+Parameter Inputs: Numbers. 
+Logic: Function performs subtraction based on inputs.
+
+
+5. Question 5
+please write the python code for the subtraction function you designed above:
+def subtract(a, b):
+  return (a - b)
+
+
+6. Extra credit
+Search the internet for some interesting computer science area’s. I want you to
+try and find something that is interesting to you, not necessarily to this class.
+Here write the subject and paste the link to it. Also put three questions you
+have about that subject/niche something specific to that subject that might not
+be right to ask about all of CS. If you questions are interesting to me, I might take
+the opportunity to answer some of them in lab (to the best of my ability).
