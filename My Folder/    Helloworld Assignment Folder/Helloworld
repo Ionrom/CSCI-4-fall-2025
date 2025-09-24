@@ -1,14 +1,14 @@
-import numpy as np
-#python helloworld
+# python code
+# import array
+import array as arr
 
-hw = np.array(['Helloworld'])
-hello = "world"
+print("Helloworld")
 
-this_number = "42"
+a = arr.array(
+    'h', #opcode for unsigned short
+    [26] # list
+)
 
-this_number = int(this_number) + 5
+b = arr.array('l', [1,2,3,4,5])
 
-this_number + 1
-
-print (this_number, 5)
-print (hw)
+print(b.pop())
