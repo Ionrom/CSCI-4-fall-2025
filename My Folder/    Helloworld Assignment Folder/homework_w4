@@ -16,9 +16,11 @@ print (x)
 
 A list is a sequence of code organized in which items that have indexes used to position themselves from 0, they are structured in a range from first to last. 
 It is similar to an array, the only difference is the list focuses more on already built structures within the coding language, which allows us to add, remove, and even change the digit in question, while arrays focus more on computational
-performance on elements and data types. The list is more about groups than just 2 and it's full of many pieces like a puzzle. They can contain an item or not. The list is a mixer of data added with numbers with brackets at both sides to beginning and end of the code, sometimes it requires only one type for it to operate step by step when
-arranged. The brackets need to be in a sequence for the list to work; it needs to be an append,  a pop, a slice, a reverse, a remove, or even a sort for it to work. 
-The list can also multiple items and hold many different types of data which is one other thing arrays can not do. We can use certain ways to organize or manipulate the data within a list such as making it about numbers in math, groceries or even about  just shopping in general. 
+performance on elements and data types. The list is more about groups than just 2 and it's full of many pieces like a puzzle. They can contain an item or not. 
+The list is a mixer of data added with numbers with brackets at both sides to beginning and end of the code, sometimes it requires only one type for it to operate step by step when
+arranged. The brackets need to be in a sequence for the list to work; it needs to be an append, a pop, a slice, a reverse, a remove, or even a sort for it to work. 
+The list can also multiple items and hold many different types of data which is one other thing arrays can not do. 
+We can use certain ways to organize or manipulate the data within a list such as making it about numbers in math, groceries or even about  just shopping in general. 
 
 # a list of material possessions
 a_of_wants_list = ["Ps5 Controller","Speakers","Projector"]
