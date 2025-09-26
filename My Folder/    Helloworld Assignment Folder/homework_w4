@@ -4,7 +4,7 @@ homework_w4
 Due: Thu Sep 25, 2025 11:59pm
 Arrays are a structured collection of groups; they contain integers, characters, and booleans. The elements of an array must contain specific data stored in them to function directly. 
 We use arrays to structure data within code. They are like strings. We make them do certain things in programming language, when they operate elements within the data, we use brackets to make sure they function. 
-In the documentation it tells us a little more about arrays than before. The first part of the documentation talks about the definitions of the values in code types; they're objects full of single characters and integers.  
+In the python docs it tells us a little more about arrays than before. The first part of the documentation talks about the definitions of the values in code types; they're objects full of single characters and integers.  
 The document then talks about the following representations and modules, such as array itemsizes and array type codes. 
 Array type codes are arrays that are set up by values binded by a byte or byte array and it is usually the type code character that serves as the function to the array, while an item size is only about one length of an array in an item.
   
