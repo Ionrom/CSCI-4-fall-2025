@@ -1,0 +1,20 @@
+Ian Stuart
+CSCI 004
+homework_w4
+Due: Thu Sep 25, 2025 11:59pm
+Arrays are a structured collection of groups; they contain integers, characters, and booleans. The elements of an array must contain specific data stored in them to function directly. 
+We use arrays to structure data within code. They are like strings. We make them do certain things in programming language, when they operate elements within the data, we use brackets to make sure they function. In the documentation it tells us a little more about arrays than before. The first part of the documentation talks about the definitions of the values in code types; they're objects full of single characters and integers.  The document then talks about the following representations and modules, such as array itemsizes and array type codes. Array type codes are arrays that are set up by values binded by a byte or byte array and it is usually the type code character that serves as the function to the array, while an item size is only about one length of an array in an item.
+  
+#example to show 
+import array as arr
+x = arr.array ('b', [30])
+Z = arr.array('q', [6, 12, 18, 24, 30])
+print (x)
+
+A list is a sequence of code organized in which items that have indexes used to position themselves from 0, they are structured in a range from first to last. It is similar to an array, the only difference is the list focuses more on already built structures within the coding language, which allows us to add, remove, and even change the digit in question, while arrays focus more on computational
+performance on elements and data types. The list is more about groups than just 2 and it's full of many pieces like a puzzle. They can contain an item or not. The list is a mixer of data added with numbers with brackets at both sides to beginning and end of the code, sometimes it requires only one type for it to operate step by step when
+arranged. The brackets need to be in a sequence for the list to work; it needs to be an append,  a pop, a slice, a reverse, a remove, or even a sort for it to work. The list can also multiple items and hold many different types of data which is one other thing arrays can not do. We can use certain ways to organize or manipulate the data within a list such as making it about numbers in math, groceries or even about  just shopping in general. 
+
+# a list of material possessions
+a_of_wants_list = ["Ps5 Controller","Speakers","Projector"]
+print(a_of_wants_list))
