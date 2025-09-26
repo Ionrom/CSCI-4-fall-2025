@@ -20,7 +20,7 @@ performance on elements and data types. The list is more about groups than just 
 The list is a mixer of data added with numbers with brackets at both sides to beginning and end of the code, sometimes it requires only one type for it to operate step by step when
 arranged. The brackets need to be in a sequence for the list to work; it needs to be an append, a pop, a slice, a reverse, a remove, or even a sort for it to work. 
 The list can also multiple items and hold many different types of data which is one other thing arrays can not do. 
-We can use certain ways to organize or manipulate the data within a list such as making it about numbers in math, groceries or even about  just shopping in general. 
+We can use certain ways to organize or even manipulate the data within a list such as making it about numbers in math, groceries or even about  just shopping in general. 
 
 # a list of material possessions
 a_of_wants_list = ["Ps5 Controller","Speakers","Projector"]
