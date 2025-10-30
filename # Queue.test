@@ -1,23 +1,10 @@
 # Queue (waiting line)
 
-import threading, queue
+q = []
 
-q = queue.Queue()
+def push(q, e):
+ q.append(e)
+ return q
 
-def Customer():
-    while True:
-        item: q.get()
-        print(f'ordering of {item}')
-        print(f'ordered of {item}')
-        q.task_done()
-
-# Turn-on the Customer threading
-Threading.Thread(target = Customer, daemon = True).start()
-
-# Send Thirty task request to the customer
-for item in range(30):
-    q.put(item)
-
-# Block until all orders are done.
-q.join()
-print('All orders completed') 
+ def pop(q):
+ return q.pop(0)
