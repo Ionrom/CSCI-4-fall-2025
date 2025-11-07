@@ -1,0 +1,55 @@
+# to build a stack for a stack structure
+a_stack_of_cards = []
+fd = []
+Stack = []
+​
+# Push some cards to a_stack_of_cards with an append(), which serves as an item for a data structure.
+a_stack_of_cards.append('l')
+a_stack_of_cards.append('b')
+a_stack_of_cards.append('f')
+print(f"a_stack_of_cards after pushes: {a_stack_of_cards}")
+​
+# Push function for adding to the stack
+def push(k, q):
+   k.append(q)
+   return k
+​
+kings = ['King of Hearts', 'King of Diamonds', 'King of Clubs', 'King of Spades']
+queens = ['Queen of Hearts', 'Queen of Diamonds', 'Queen of Clubs', 'Queen of Spades']
+​
+fd = push(fd, kings)
+fd = push(fd, queens)
+​
+print("fd after pushing kings and queens:", fd)
+​
+# Pop for the top element from a_stack_of_cards
+popped_element = a_stack_of_cards.pop()
+print(f"popped_element: {popped_element}")
+​
+#The peek as  the top element
+top_element = a_stack_of_cards[-1]
+print(f"top_element: {top_element}")
+​
+#I fixed the shuffle function: it should append the deck to the stack, not the deck itself, instead adding every card separately.
+def shuffle(Stack, deck):
+   Stack.append(deck)
+   return Stack
+​
+shuffle_the_deck_of_cards = ['joker', 'spades', 'Hearts', 'diamonds', 'spades']
+fd = shuffle(fd, shuffle_the_deck_of_cards)
+print("fd after shuffle:", fd)
+​
+# Pop it again from a stack of cards
+popped_element = a_stack_of_cards.pop()
+print(f"popped_element: {popped_element}")
+​
+# Peek the top element again
+top_element = a_stack_of_cards[-1]
+print(f"top_element: {top_element}")
+​
+# A function that lets us start a new round
+def play_again_in_a_other_round(P1, P2, P3, P4):
+   return [P1, P2, P3, P4]
+​
+players_turn = ['Player 1 turn', 'Player 2 turn', 'Player 3 turn', 'Player 4 turn']
+print(f"Players: {players_turn}")
