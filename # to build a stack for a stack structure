@@ -1,55 +1,71 @@
 # to build a stack for a stack structure
-a_stack_of_cards = []
-fd = []
-Stack = []
-​
-# Push some cards to a_stack_of_cards with an append(), which serves as an item for a data structure.
+a_stack_of_cards = [] # stack for single cards (letters)
+fd = [] # "falldown" stack for grouped cards (kings, queens)
+stack = [] # currently as an unused stack, (placeholder)
+
+# add all individual cards
+
+# Push some cards to a_stack_of_cards
 a_stack_of_cards.append('l')
 a_stack_of_cards.append('b')
 a_stack_of_cards.append('f')
 print(f"a_stack_of_cards after pushes: {a_stack_of_cards}")
-​
-# Push function for adding to the stack
+# Output here will be: ['l', 'b', 'f']
+
+# Push function for adding to a stack
 def push(k, q):
-   k.append(q)
-   return k
-​
+    #Push an item or a group of items to the top of the stack
+    k.append(q)
+    return k
+
+#group cards of kings and queens
 kings = ['King of Hearts', 'King of Diamonds', 'King of Clubs', 'King of Spades']
 queens = ['Queen of Hearts', 'Queen of Diamonds', 'Queen of Clubs', 'Queen of Spades']
-​
+
+# Push groups into the falldown stack (fd)
 fd = push(fd, kings)
 fd = push(fd, queens)
-​
+
 print("fd after pushing kings and queens:", fd)
-​
-# Pop for the top element from a_stack_of_cards
+# Output: ['Kings of Hearts', ...], ['Queen of Hearts',...]
+
+# The pop and peek examples demonstrated in the program
+
+# Pop the top element from a_stack_of_cards
 popped_element = a_stack_of_cards.pop()
 print(f"popped_element: {popped_element}")
-​
-#The peek as  the top element
+
+# Peek at the top element
 top_element = a_stack_of_cards[-1]
 print(f"top_element: {top_element}")
-​
-#I fixed the shuffle function: it should append the deck to the stack, not the deck itself, instead adding every card separately.
-def shuffle(Stack, deck):
-   Stack.append(deck)
-   return Stack
-​
+
+# Fixed shuffle function: it should append the deck, not itself
+def shuffle(stack, deck):
+    # Add a to the stack it will not go random but it just be place on top
+    stack.append(deck)
+    return stack
+
 shuffle_the_deck_of_cards = ['joker', 'spades', 'Hearts', 'diamonds', 'spades']
 fd = shuffle(fd, shuffle_the_deck_of_cards)
 print("fd after shuffle:", fd)
-​
-# Pop it again from a stack of cards
+# Output that brings out: [['King...'], ['Queen...'], ['joker', 'spades', 'Hearts', 'diamonds', 'spades']] when printed out
+
+# Where it Pops and peeks again:
+
+# Pop again from a_stack_of_cards
 popped_element = a_stack_of_cards.pop()
 print(f"popped_element: {popped_element}")
-​
-# Peek the top element again
+
+# Peek at the top element again
 top_element = a_stack_of_cards[-1]
 print(f"top_element: {top_element}")
-​
-# A function that lets us start a new round
+
+# A New round starts and players each take a turn
+
+# Function to start a new round
 def play_again_in_a_other_round(P1, P2, P3, P4):
-   return [P1, P2, P3, P4]
-​
+    # The Program Returns a list of players for a new round
+    return [P1, P2, P3, P4]
+
 players_turn = ['Player 1 turn', 'Player 2 turn', 'Player 3 turn', 'Player 4 turn']
 print(f"Players: {players_turn}")
