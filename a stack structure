@@ -1,0 +1,48 @@
+# Short verison to build a stack for a stack structure
+stack = []
+
+# Push function for the cards
+def push(stack, item):
+    stack.append(item)
+    print(F"Pushed: {item}")
+
+# The pop function
+def pop(stack):
+     if not stack:
+        item = stack.pop()
+        print(F"Popped: {item}")
+        return item
+ 
+        print("Stack is empty!")
+        return None
+
+# The peek function
+def peek(stack):
+     if not stack:
+        print(F"Top of stack: {stack[-1]}")
+        return stack[-1]
+  
+        print("Stack is empty!")
+        return None
+
+# Examples of playing card usage
+cards = ['King', 'Queen', 'Joker','Jack','Hearts', 'Diamonds', 'Clubs',
+         'Spades', '10', '9', '8', '7', '6', '5', '4', '3', '2', 'Ace']
+
+# Push cards onto the stack
+for card in cards:
+    push(stack, card)
+
+print("Current stack:", stack)
+
+# Peek at the top of the card
+peek(stack)
+
+# Pop a few cards in
+pop(stack)
+pop(stack)
+
+# It peek again
+peek(stack)
+
+print("Final stack:", stack)
