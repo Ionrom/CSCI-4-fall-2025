@@ -1,5 +1,5 @@
 # The RPN Calculator
-import operator # This import assist communication with the program to make the functions work within.
+import operator # This import assists communication with the program to make the functions work within.
 
 x = 0 # The left number typed in as a value when put in the calculator.
 y = 0 # The right number typed in as a value when put in the calculator.
@@ -7,7 +7,7 @@ o = operator # This is the outcome for when both numbers are put together
 
 # This serves as the evaluation of the program, which operates multiple forms of addition
 def arithmetics(x, y): 
-    return x + y # the return is used to both add up and give out the result.
+    return x + y # the return is used to both add up and gives out the result.
 
 def rpn_calculation(c): # This helps the function perform the calculation by changing the value within the program, depending on which math operation you are using. 
 # known math operators: "+", "-", "*", "/"
