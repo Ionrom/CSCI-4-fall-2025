@@ -7,7 +7,7 @@ o = operator # This is the outcome for when both numbers are put together
 
 # This serves as the evaluation of the program, which operates multiple forms of addition
 def arithmetics(x, y): 
-    return x + y # the return is used to both add up and gives out the result.
+    return x + y # the return is used to both add up and gives out a result.
 
 def rpn_calculation(c): # This helps the function perform the calculation by changing the value within the program, depending on which math operation you are using. 
 # known math operators: "+", "-", "*", "/"
