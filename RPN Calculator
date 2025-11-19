@@ -16,6 +16,9 @@ def rpn_calculation(c): # This helps the function perform the calculation by cha
     if c == 0: # if/elif c == 0-3: helps run the code through the operation to give us an addition, subtraction, multiplication, or division within the program.
         stack.append(1)
         stack.append(1)
+        y = stack.pop()
+        x = stack.pop()
+        result = x + y
         stack.append(stack.pop() + stack.pop())
         print(1 + 1)
     # This stack pushes the 1 two times and adds them together, and then gives us a result of 2 from (1+1).
@@ -25,13 +28,17 @@ def rpn_calculation(c): # This helps the function perform the calculation by cha
         stack.append(1)
         x = stack.pop()
         y = stack.pop()
-        stack.append(x - y) 
+        result = x - y
+        stack.append(stack.pop() - stack.pop()) 
         print(1 - 1)
       # This stack does the opposite; it subtracts rather than adds up, giving us a 0 from (1-1).
       
     elif c == 2:
         stack.append(2)
         stack.append(1)
+        x = stack.pop()
+        y = stack.pop()
+        result = x * y
         stack.append(stack.pop() * stack.pop())
         print(2 * 1)
       # This stack mutiplies the numbers as a double which still gives us a result of 2 from (2*1).
@@ -41,11 +48,18 @@ def rpn_calculation(c): # This helps the function perform the calculation by cha
         stack.append(1)
         x = stack.pop()
         y = stack.pop()
-        stack.append(x / y)
+        result = x / y
+        stack.append(stack.pop() / stack.pop())
         print(2 / 1)
      # This stack divides the numbers, showing us a number between the two numbers from the setup of these numbers. This still gives us a 2 from (2/1).
      
     else:
+        stack.append(2)
+        stack.append(1)
+        y = stack.pop()
+        x = stack.pop()
+        result = x * y
+        stack.append(stack.pop() * stack.pop())
         print(2 * 1)
 
     # From testing the math evaluated expressions from the PDF, I got these results below:
