@@ -1,0 +1,30 @@
+# Pythagoras theorem
+
+# The programs purpose is to calculate the distances in between two points in 2D space.
+
+class Point: # class is used to store coordinates of a point. 
+    def __init__(self, x, y): 
+        self.x = x
+        self.y = y
+        
+# They're meant to read coordinates for Point A & B from the user perspective.        
+x1 = float(input("Enter x1: "))
+y1 = float(input("Enter y1: "))
+x2 = float(input("Enter x2: "))
+y2 = float(input("Enter y2: "))
+
+# These lines with two variables in them create two distinct point objects with data in them.
+pointA = Point(x1, y1)
+pointB = Point(x2, y2)
+
+# distance = sqrt((x2 - x1)^2 + (y2 - y1)^2).
+distance = ((pointB.x - pointA.x)**2 + (pointB.y - pointA.y)**2)**0.5
+
+# for the result to be printed in the code.
+print(f"the distance between the is: {distance}")
+
+# The Example of the input:
+# input for running the module: (x1 = 3, y1 = 5, x2 = 7, y2 = 9)
+
+# The Expected output:
+# the distance between the is: 5.656854249492381
