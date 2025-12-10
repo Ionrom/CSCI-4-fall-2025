@@ -1,0 +1,5 @@
+def combine(x, y, z):  
+  outcome = x + y * z
+  return outcome
+
+print(15, 30, 45)
