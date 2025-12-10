@@ -3,6 +3,6 @@
 def combine(c, d, e):  
   outcome = e + d * e 
   return outcome
-return will be the output
-print(15, 30, 45)
+#return will be the output for the program
+print(combine(15, 30, 45))
 # print over there will be are argument.
