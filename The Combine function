@@ -1,4 +1,4 @@
-# The Combine function
+# The Combine function # us
 # def mean define. These are the inputs(c, d, e). the () brackets serves as the parameters
 def combine(c, d, e):  
   outcome = e + d * e # this meant to be the body of the statment for the program.
