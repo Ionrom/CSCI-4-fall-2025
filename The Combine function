@@ -5,4 +5,4 @@ def combine(c, d, e):
   return outcome
 #return will be the output for the program
 print(combine(15, 30, 45))
-# print will produce the numbers with the argument.
+# the print will produce the numbers with the argument.
