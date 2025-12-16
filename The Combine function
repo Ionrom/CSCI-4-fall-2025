@@ -1,7 +1,7 @@
 # The Combine function 
 # def means define. These are the inputs(c, d, e). the () brackets serves as the parameters
 def combine(c, d, e):  
-  outcome = e + d + e # this meant to be the body of the statement for the program.
+  outcome = c + d + e # this meant to be the body of the statement for the program.
   return outcome
 #return will be the output for the program
 print(combine(15, 30, 45))
