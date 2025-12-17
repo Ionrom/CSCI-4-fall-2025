@@ -1,0 +1,52 @@
+# Bouncing Ball Animation
+# most snippets of the code comes from matplotlib The library API Refernce page.
+# install Python3 in our terminal to make matplotlib work in the code.
+import matplotlib.pyplot as plt # plt is the plotting interface which allows us to create figures, axes, and to draw shapes.  
+from matplotlib.animation import FuncAnimation # this import repeatedly lets use a function called (update) that redraw objects frame by frame.
+from matplotlib.patches import Circle # Circle is a patch object that draws a circular shape that uses bezier curves to make a scale circle.
+
+# The figure(fig) and axes(ax)setup. plt.subplots() utilizes both figure and axes at the exact same time at once.
+fig, ax = plt.subplots() # fig opens a window canvas while ax align plot the areas inside the figure.
+ax.set_xlim(0, 500) # set_xlim is the x-axis limit which goes left and right.
+ax.set_ylim(0, 500) # set_ylim is the y-axis limit goes which goes up and down.
+# these to help defined the boundaries of where the ball moves.
+ax.set_facecolor((0, 0, 0)) #This sets the background to being black.
+# set_aspect means set the aspect ratio of axes scaling. This makes the ball in the program stay as a circle.
+ax.set_aspect(1) # this equals the scaling of the ball using x and y to stay circular.
+
+radius = 40 # radius indicates ball's size and data units when detecting a collison when its the wall.
+ball = Circle((300, 400), radius=radius, color=(50/255, 255/255, 50/255)) # this gives the ball its center position, size and its color values being a light green color.
+ax.add_patch(ball) # add_patch gives the circle axes so the ball can get animated and drawn into the program.
+
+def make_animation(): # as the name suggest this function helps create the animation and help return an update when performed in the program.
+    a, b = 300, 400 # a and b serves as the x and y positions of the ball.
+    ma, mb = 12, 24 # the m stands for movement. ma and mb are x and y's direction of speed 
+
+# the update function animates the ball's positon based on its coordinates and determines the motion and movement of where its programmed to go. 
+    def update(frame): # the frame serves as an integer that corresponds with the code by giving the ball illusion of motion, speed, and even the ability of bouncing around when played in the animation.
+        # frame only serves as a parameter here it automatically pass into FuncAnimation. 
+        nonlocal a, b, ma, mb # nonlocal allows the ball's position and velocity to be update across each frame and puts the variables bounded in a nest function to proclaim them in a scope.
+# note nonlocal is a keyword used within a nested function into modified a variable that belongs to an enclosing function. 
+# The ball's movement
+# (+=) this augmented operator adds value to the balls position variables and updates ball speed rate each frame.
+        a += ma # a and b are the x(a) and y(b) coordinates of the ball's center points.
+        b += mb # ma and mb are the horizontal(ma) and vertical(mb) that indicates the balls velocity per frame.
+      
+# the bouncing balls horizontal wall collision
+        if a - radius <= 0 or a + radius >= 500: # This notifies when the ball hits the wall left or right and bounces off afterwards.
+            ma *= -1 
+# the bouncing balls vertical wall collision            
+        if b - radius <= 0 or b + radius >= 500: # This notifies when the ball hits the wall up or down and bounces off afterwards.
+            mb *= -1 
+# (*=) this operator multiples from this negative number (-1) which makes the ball movement backwards.           
+# the update to the Ball's position on the when showed on screen
+        ball.center = (a, b) # This is where the ball changes it movement by its coordinate position when being played.
+        return ball, # the comma(,) is used to return a tuple of patches to be redraw for Funcanimation tell to blit make this possible. 
+
+    return update # return update allows the animation to go on repeatedly and makes the ball bounce continuously around.
+
+#This boots up the animation
+# ani is an the object that makes Funcanimation process fig to make an update to the animation, the frames are limited by the numbers inputed in the code.
+#interval sets the milliseconds of the speed in between frames, while blit=True which is the block transfer that makes the animation faster by redrawing the movement of the ball by frames.
+ani = FuncAnimation(fig, make_animation(), frames=300, interval=30, blit=True)
+plt.show() #This feature starts up the entire animation and stops when you exit out of the program.
