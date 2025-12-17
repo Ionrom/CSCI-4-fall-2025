@@ -26,7 +26,7 @@ def make_animation(): # as the name suggest this function helps create the anima
     def update(frame): # the frame serves as an integer that corresponds with the code by giving the ball illusion of motion, speed, and even the ability of bouncing around when played in the animation.
         # frame only serves as a parameter here it automatically pass into FuncAnimation. 
         nonlocal a, b, ma, mb # nonlocal allows the ball's position and velocity to be update across each frame and puts the variables bounded in a nest function to proclaim them in a scope.
-
+# note nonlocal is a keyword used within nested function into modified a variable that belongs to an enclosing function. 
 # The ball's movement
 # (+=) this augmented operator adds value to the balls position variables and updates ball speed rate each frame.
         a += ma # a and b are the x(a) and y(b) coordinates of the ball's center points.
@@ -43,10 +43,11 @@ def make_animation(): # as the name suggest this function helps create the anima
         ball.center = (a, b) # This is where the ball changes it movement by its coordinate position when being played.
         return ball, # the comma(,) is used to return a tuple of patches to be redraw for Funcanimation tell to blit make this possible. 
 
-    return update # return update allows the animation to go on repeatedly and make the ball bounce continuously around.
+    return update # return update allows the animation to go on repeatedly and makes the ball bounce continuously around.
 
 #This boots up the animation
 # ani is an the object that makes Funcanimation process fig to make an update to the animation, the frames are limited by the numbers inputed in the code.
 #interval sets the milliseconds of the speed in between frames, while blit=True which is the block transfer that makes the animation faster by redrawing the movement of the ball by frames.
 ani = FuncAnimation(fig, make_animation(), frames=300, interval=30, blit=True)
 plt.show() #This feature starts up the entire animation and stops when you exit out of the program.
+
