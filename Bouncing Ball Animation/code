@@ -41,7 +41,7 @@ def make_animation(): # as the name suggest this function helps create the anima
 # (*=) this operator multiples from this negative number (-1) which makes the ball movement backwards.           
 # the update to the Ball's position on the when showed on screen
         ball.center = (a, b) # This is where the ball changes it movement by its coordinate position when being played.
-        return ball, # The comma(,) is used to return a tuple element of patches to allow the ball to be redrawn by Funcanimation to update the frames of it.
+        return ball, # The comma(,) is used to return a tuple element of patches to allow the ball to be redrawn by Funcanimation to update the frames with help of blit.
 
     return update # return update allows the animation to go on repeatedly and makes the ball bounce continuously around.
 
